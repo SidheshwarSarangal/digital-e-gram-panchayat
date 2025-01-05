@@ -1,0 +1,399 @@
+/* General Reset */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.services-page {
+    display: flex;
+}
+
+
+.services-page-sidebar {
+    width: 15%;
+    background-color: #00796b;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.services-page-sidebar ul {
+    list-style: none;
+}
+
+.services-page-sidebar ul li {
+    margin: 15px 0;
+}
+
+.services-page-sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.services-page-sidebar ul li a:hover {
+    color: #ffcc00;
+}
+
+
+.services-page-main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+.services-page-logged-in-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-page-role-content {
+    margin-top: 20px;
+}
+
+.services-page-admin-content h1 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.services-page-admin-content ul {
+    list-style: none;
+}
+
+.services-page-admin-content ul li {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.services-page-admin-content ul :hover{
+    background-color: rgb(248, 255, 248);
+    cursor: pointer;
+    
+}
+
+.services-page-admin-content ul li h2 {
+    color: #00796b;
+    font-size: 1.5rem;
+}
+
+.services-page-admin-content ul li p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.services-page-plus-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 10%;
+    padding: 15px;
+    background-color: #ffcc00;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    
+}
+
+.services-page-plus-icon:hover {
+    background-color: #ff9800;
+}
+
+
+.services-page-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+    
+}
+
+
+.services-page-popup-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    position: relative;
+    animation: slideIn 0.4s ease-in-out;
+    
+}
+
+
+.services-page-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.services-page-popup-close:hover {
+    background: #ff9800;
+}
+
+
+.services-page-popup-box h2 {
+    font-size: 1.8rem;
+    color: #00796b;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.services-page-popup-box p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.services-page-popup-box input,
+.services-page-popup-box textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.services-page-popup-box input:focus,
+.services-page-popup-box textarea:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.services-page-popup-box textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+.services-page-popup-box button {
+    padding: 12px 20px;
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.services-page-popup-box button:hover {
+    background-color: #005f56;
+}
+
+.services-page-popup-box .services-page-popup-delete {
+    background-color: #ff5722;
+}
+
+.services-page-popup-box .services-page-popup-delete:hover {
+    background-color: #d84315;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796b;
+    color: white;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer strong {
+    color: #ffcc00;
+}
+
+
+@media (max-width: 768px) {
+    .services-page {
+        flex-direction: column;
+    }
+
+    .services-page-sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .services-page-main-content {
+        margin-top: 30%;
+    }
+
+    .services-page-admin-content ul li {
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+
+    .services-page-popup-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .services-page-popup-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .services-page-popup-box button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    
+    .services-page {
+        display: block;
+        padding: 10px;
+    }
+
+    .services-page-sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .services-page-main-content {
+        padding: 0;
+        margin-top: 100%;
+    }
+
+    .services-page-logged-in-content {
+        font-size: 14px;
+    }
+
+    .services-page-logged-in-content h1 {
+        font-size: 18px;
+    }
+
+    .services-page-logged-in-content p {
+        font-size: 14px;
+    }
+
+    .services-page-admin-content h1 {
+        font-size: 18px;
+    }
+
+    .services-page-admin-content ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .services-page-admin-content ul li {
+        margin-bottom: 15px;
+    }
+
+    .services-page-popup-overlay {
+        padding: 15px;
+    }
+
+    .services-page-popup-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .services-page-popup-actions button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .services-page-popup-close {
+        font-size: 18px;
+        right: 10px;
+        top: 10px;
+    }
+
+    .services-page-plus-icon {
+        display: block;
+        margin-top: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* General Layout */
+

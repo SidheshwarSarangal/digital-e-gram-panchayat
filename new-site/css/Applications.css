@@ -1,0 +1,337 @@
+/* General Styles */
+.applications-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar nav ul li a:hover {
+    color: #ccc;
+}
+
+.application-page-main-content {
+    flex: 1;
+    padding: 3%;
+    background-color: white;
+    padding-right: 18%;
+    margin-left: 16%;
+
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.application-page-application-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.application-page-application-card {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.application-page-application-card:hover {
+    background-color: #e4edf7;
+}
+
+.application-page-application-card h2 {
+    margin: 0 0 10px;
+    color: #2c3e50;
+}
+
+.application-page-application-card p {
+    margin: 5px 0;
+    color: #7f8c8d;
+}
+
+.application-page-application-card p strong {
+    color: #34495e;
+}
+
+/* Popup Styles */
+
+/* Popup Styles */
+/* Popup Styles */
+.application-page-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    min-width: 300px;
+    /* To ensure it's not too small */
+    z-index: 1010;
+}
+
+.application-page-popup h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.application-page-popup p {
+    margin: 5px 0;
+    color: #7f8c8d;
+}
+
+.application-page-popup button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.application-page-popup button:hover {
+    background-color: #c0392b;
+}
+
+.application-page-popup form {
+    margin-top: 20px;
+}
+
+.application-page-popup form div {
+    margin-bottom: 15px;
+}
+
+.application-page-popup form label {
+    font-weight: bold;
+    display: block;
+}
+
+.application-page-popup form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.application-page-popup form button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.application-page-popup form button:hover {
+    background-color: #2ecc71;
+}
+
+/* Ensure the delete button is not hidden */
+.delete-button-container {
+    margin-top: 20px;
+    /* Add space between other elements */
+    display: flex;
+    justify-content: center;
+    /* Center the button */
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+
+/* CSS for staff-side status update section */
+.application-page-staffside {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-page-staffside>div {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.application-page-staffside .status-update-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.application-page-staffside .status-update-buttons button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 180px;
+    /* Set a consistent width */
+}
+
+.application-page-staffside .status-update-buttons button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.application-page-staffside .status-update-buttons button:focus {
+    outline: none;
+}
+
+/* Specific styling for each status */
+.application-page-staffside .status-update-buttons button:nth-child(1) {
+    background-color: #4caf50;
+    /* Green for Accepted and Processing */
+    color: white;
+}
+
+.application-page-staffside .status-update-buttons button:nth-child(2) {
+    background-color: #f44336;
+    /* Red for Closed */
+    color: white;
+}
+
+/* Media Query for 780px and below */
+@media (max-width: 780px) {
+
+    /* General Styles */
+    .applications-page {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .application-page-main-content {
+        padding: 15px;
+        background-color: white;
+        padding-right: 0;
+    }
+
+    .application-page-application-card {
+        padding: 12px;
+    }
+
+    .application-page-popup {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .application-page-popup form textarea {
+        font-size: 14px;
+    }
+
+    /* Staff-side Status Update Section */
+    .application-page-staffside {
+        padding: 10px;
+    }
+
+    .application-page-staffside>div {
+        font-size: 16px;
+    }
+
+    .application-page-staffside .status-update-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .application-page-staffside .status-update-buttons button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query for 480px and below */
+@media (max-width: 480px) {
+
+    /* General Styles */
+    .sidebar {
+        padding: 10px;
+    }
+
+    .application-page-main-content {
+        padding: 10px;
+    }
+
+    .application-page-application-card {
+        padding: 10px;
+    }
+
+    .application-page-popup {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .application-page-popup form textarea {
+        font-size: 13px;
+    }
+
+    /* Staff-side Status Update Section */
+    .application-page-staffside {
+        padding: 8px;
+    }
+
+    .application-page-staffside>div {
+        font-size: 14px;
+    }
+
+    .application-page-staffside .status-update-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .application-page-staffside .status-update-buttons button {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}

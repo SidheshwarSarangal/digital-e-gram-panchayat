@@ -1,0 +1,46 @@
+.gram-info-content {
+    max-width: 800px;
+    margin: 8em auto; /* Center the content with margin */
+    padding: 20px; /* Add padding for inner spacing */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Consistent font */
+    line-height: 1.8; /* Improve readability */
+    color: #333; /* Text color */
+}
+
+.gram-info-content h3 {
+    font-size: 1.8rem; /* Larger font size for the title */
+    color: #00796b; /* Match the theme with a green shade */
+    margin-bottom: 15px; /* Add space below the heading */
+    text-align: center; /* Center align the title */
+}
+
+.gram-info-content p {
+    font-size: 1rem; /* Standard font size */
+    color: #555; /* Softer text color for paragraphs */
+    margin-bottom: 15px; /* Add space below each paragraph */
+    text-align: justify; /* Justify text for clean alignment */
+}
+
+.gram-info-content ul {
+    margin: 15px 0; /* Vertical spacing for the list */
+    padding-left: 20px; /* Indent the list from the left */
+    list-style-type: disc; /* Use default bullet points */
+    color: #333; /* Match text color */
+}
+
+.gram-info-content ul li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1rem; /* Standard font size for list items */
+    color: #00796b; /* Highlight list items with a green shade */
+}
+
+.gram-info-content ul li::marker {
+    color: #ffcc00; /* Change bullet point color to gold for distinction */
+}
+
+.gram-info-content p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+}

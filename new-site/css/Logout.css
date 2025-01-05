@@ -1,0 +1,140 @@
+/* General styling for the logout page */
+#logout-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #2c3e50;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ccc;
+}
+
+/* Heading styling */
+#logout-page-heading {
+    font-size: 2rem;
+    margin-top: 60px;
+}
+
+/* Message styling */
+#logout-page-message {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Buttons container styling */
+#logout-page-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+#logout-page-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#logout-page-buttons button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#logout-page-buttons a {
+    text-decoration: none;
+}
+
+@media (max-width: 780px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    #logout-page {
+        margin: 15px;
+    }
+
+    #logout-page-heading {
+        margin-left: 16%;
+        font-size: 1.8rem;
+    }
+
+    #logout-page-message {
+        font-size: 1rem;
+        margin-left: 30%;
+    }
+
+    #logout-page-buttons button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        margin-left:90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+    }
+
+    #logout-page {
+        margin: 10px;
+    }
+
+    #logout-page-heading {
+        font-size: 1.5rem;
+    }
+
+    #logout-page-message {
+        font-size: 0.9rem;
+    }
+
+    #logout-page-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #logout-page-buttons button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
